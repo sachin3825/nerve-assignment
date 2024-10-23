@@ -22,13 +22,15 @@ const DateDropDown: React.FC<Props> = ({ selectedDate, onChangeDate }) => {
 
   return (
     <div className="dropdown">
-      <div className="dropdown-top" onClick={toggleDropdown}>
-        <p>{selectedDate}</p>
+      <div className="dropdown-toggle" onClick={toggleDropdown}>
+        <div className="dropdown-top">
+          <p>{selectedDate}</p>
 
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          className={`arrow ${isOpen ? "rotate" : ""}`}
-        />
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            className={`arrow ${isOpen ? "rotate" : ""}`}
+          />
+        </div>
 
         {isOpen && (
           <div className="dropdown-menu">
